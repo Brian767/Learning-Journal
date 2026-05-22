@@ -1,71 +1,118 @@
-html, 
+html,
 body {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
-h1, h2, h3, h4, h5, h6, p{
-    margin: 0;
-    padding: 0;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
 }
 
+.grid-container {
+  display: grid;
 
-
-.grid-container{
-    display: grid;
+  grid-template-columns: 1em 1fr 1em;
+  grid-template-areas:
+    ".... .... ...."
+    ".... head ...."
+    "hero hero hero"
+    ".... main ...."
+    ".... foot ...."
+    ".... .... ....";
+  gap: 1em 0;
 }
 
-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: rgb(200, 200, 200);
-      font-family: "Roboto", sans-serif;
+header {
+  grid-area: head;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
 }
 
-
-header p{
-    font-size: .85rem;
-    font-weight: bold;
-    letter-spacing: -0.03rem;
+header p {
+  font-size: 0.85rem;
+  font-weight: bold;
+  letter-spacing: -0.03rem;
 }
 
-.logo-title{
-    display: flex;
-    align-items: center;
-    gap: 3px;
+.logo-title {
+  display: flex;
+  align-items: center;
+  gap: 3px;
 }
 
-ul{
-    list-style: none;
-    display: flex;
-    gap: 32px;
-    margin: 0;
-    padding: 0;
+ul {
+  list-style: none;
+  display: flex;
+  gap: 32px;
+  margin: 0;
+  padding: 0;
 }
 
-header a{
-    text-transform: uppercase;
-    font-family: "Source Sans 3", sans-serif;
-    font-weight: 600;
-    font-size: .75rem;
-    text-decoration: none;
-    color: black;
+header a {
+  text-transform: uppercase;
+  font-family: "Source Sans 3", sans-serif;
+  font-weight: 600;
+  font-size: 0.75rem;
+  text-decoration: none;
+  color: black;
+}
+
+/* main */
+
+main {
+  grid-area: main;
 }
 
 /* Hero */
 
-.hero-post{
-    background-image: url(/images/article-image-hero.jpg);
-    color: white;
-    gap: .5em;
+.hero-post {
+  grid-area: hero;
+  background-image: url(/images/article-image-hero.jpg);
+
+  background-size: cover;
+  background-position: center;
+  color: white;
+  gap: 0.5em;
+  padding: 5.45em 1.25em 1.25em 1.25em;
+  font-family: "Source Sans 3", sans-serif;
+}
+
+.hero-date {
+  font-size: 0.75rem;
+  font-weight: 100;
+}
+.hero-title {
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: -3%;
+  line-height: 108.2%;
+}
+.hero-description {
+  font-size: 1rem;
+  font-weight:normal;
 }
 
 /* Articles */
 
-/* Footer */
-footer{
-    background: #202020;
-    color: white;
+article {
 }
 
+.article-img {
+  width: 100%;
+  height: auto;
+}
+/* Footer */
+footer {
+  grid-area: foot;
+  background: #202020;
+  color: white;
+}
