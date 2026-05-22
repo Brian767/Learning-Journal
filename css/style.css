@@ -3,3 +3,39 @@ body {
     margin: 0;
     padding: 0;
 }
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(200, 200, 200);
+      font-family: "Roboto", sans-serif;
+}
+
+
+header h1{
+    font-size: .85rem;
+    font-weight: bold;
+    letter-spacing: -0.03rem;
+}
+
+.logo-title{
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    gap: 32px;
+}
+
+header a{
+    text-transform: uppercase;
+    font-family: "Source Sans 3", sans-serif;
+    font-weight: 600;
+    font-size: .75rem;
+    text-decoration: none;
+    color: black;
+}
