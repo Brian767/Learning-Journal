@@ -4,6 +4,17 @@ body {
     padding: 0;
 }
 
+h1, h2, h3, h4, h5, h6, p{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.grid-container{
+    display: grid;
+}
+
 header{
     display: flex;
     justify-content: space-between;
@@ -13,7 +24,7 @@ header{
 }
 
 
-header h1{
+header p{
     font-size: .85rem;
     font-weight: bold;
     letter-spacing: -0.03rem;
@@ -29,6 +40,8 @@ ul{
     list-style: none;
     display: flex;
     gap: 32px;
+    margin: 0;
+    padding: 0;
 }
 
 header a{
@@ -39,3 +52,20 @@ header a{
     text-decoration: none;
     color: black;
 }
+
+/* Hero */
+
+.hero-post{
+    background-image: url(/images/article-image-hero.jpg);
+    color: white;
+    gap: .5em;
+}
+
+/* Articles */
+
+/* Footer */
+footer{
+    background: #202020;
+    color: white;
+}
+
