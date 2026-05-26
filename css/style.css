@@ -27,6 +27,16 @@ p {
   /* gap: 1em 0; */
 }
 
+.grid-container-click {
+  display: grid;
+  grid-template-columns: 1.25em 1fr 1.25em;
+  grid-template-areas:
+    ".... head ...."
+    ".... hero ...."
+    ".... main ...."
+    "foot foot foot";
+}
+
 header {
   grid-area: head;
   display: flex;
@@ -77,16 +87,30 @@ main {
   background-image: url(/images/article-image-hero.jpg);
 
   background-size: cover;
-  background-position: center;
   color: white;
   gap: 0.5em;
   padding: 5.45em 1.25em 1.56em 1.25em;
   font-family: "Source Sans 3", sans-serif;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.hero-post-click {
+  grid-area: hero;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
 }
 
 .hero-date {
   font-size: 0.75rem;
   font-weight: 100;
+}
+
+.hero-date-click {
+  font-size: 0.75rem;
+  font-weight: 100;
+  margin-top: 2em;
 }
 .hero-title {
   font-size: 2rem;
@@ -99,10 +123,29 @@ main {
   font-weight: normal;
 }
 
+.hero-description-click {
+  font-size: 1rem;
+  font-weight: normal;
+
+  margin-bottom: 1.2em;
+}
+
+.bold {
+  font-weight: bold;
+}
+
 /* Articles */
 
 article {
   margin: 2.375em 0;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "art1"
+    "art2"
+    "art3"
+    "art4"
+    "art5"
+    "art6";
 }
 
 .article-date {
@@ -120,9 +163,31 @@ article {
 
 .article-img {
   width: 100%;
-  height: auto;
+  border-radius: 3px;
 }
 
+.article-hidden {
+  display: none;
+}
+
+.article1 {
+  grid-area: art1;
+}
+.article2 {
+  grid-area: art2;
+}
+.article3 {
+  grid-area: art3;
+}
+.article4 {
+  grid-area: art4;
+}
+.article5 {
+  grid-area: art5;
+}
+.article6 {
+  grid-area: art6;
+}
 
 /* View More */
 .view-more {
@@ -132,6 +197,15 @@ article {
   color: #000000;
   text-decoration: underline;
   margin-bottom: 2.7em;
+}
+
+.recent-posts {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #000000;
+  margin-top: 3.18em;
+  margin-bottom: 1.7em;
 }
 /* Footer */
 footer {
@@ -152,4 +226,66 @@ footer {
   font-weight: bold;
   letter-spacing: -0.03rem;
   margin-bottom: 0.25em;
+}
+
+@media (min-width: 768px) {
+  .grid-container {
+    grid-template-columns: 3.3em 1fr 3.3em;
+
+    /* grid-template-columns: 1.25em 1fr 1.25em; */
+    /* grid-template-areas:
+      ".... head ...."
+      "hero hero hero"
+      "... main ..."
+      "foot foot foot"; */
+  }
+
+  .articles {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "art1 art2 art3"
+      "art4 art5 art6";
+    gap: 1.625em;
+  }
+
+  .article {
+    margin-bottom: 0;
+  }
+
+  .article-hidden {
+    display: block;
+  }
+
+  header {
+    padding: 1.5em 0;
+  }
+
+  header p {
+    font-size: 1.25rem;
+  }
+
+  header a {
+    font-size: 1rem;
+  }
+
+  .hero-post {
+    padding: 17.9em 3.3em 3.75em 3.3em;
+    gap: 0.57em;
+  }
+
+  .hero-date {
+    font-size: 1rem;
+  }
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  .hero-description {
+    max-width: 615px;
+  }
+
+  .view-more {
+    margin-top: 2em;
+    margin-bottom: 3.18em;
+  }
 }
