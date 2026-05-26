@@ -82,6 +82,12 @@ main {
 
 /* Hero */
 
+.about-img {
+  width: 182px;
+  border-radius: 3px;
+  margin-top: 1.625em;
+}
+
 .hero-post {
   grid-area: hero;
   background-image: url(/images/article-image-hero.jpg);
