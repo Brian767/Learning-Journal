@@ -86,6 +86,7 @@ main {
   width: 182px;
   border-radius: 3px;
   margin-top: 1.625em;
+  margin-bottom: 1.625em;
 }
 
 .hero-post {
@@ -119,6 +120,13 @@ main {
   margin-top: 2em;
 }
 .hero-title {
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: -3%;
+  line-height: 108.2%;
+}
+
+.hero-title-click {
   font-size: 2rem;
   font-weight: bold;
   letter-spacing: -3%;
@@ -195,6 +203,9 @@ article {
   grid-area: art6;
 }
 
+.article-hidden-click {
+  display: none;
+}
 /* View More */
 .view-more {
   text-align: center;
@@ -245,6 +256,9 @@ footer {
       "... main ..."
       "foot foot foot"; */
   }
+  .grid-container-click {
+    grid-template-columns: 3.3em 1fr 3.3em;
+  }
 
   .articles {
     display: grid;
@@ -263,8 +277,38 @@ footer {
     display: block;
   }
 
+  .about-flex-container {
+    margin-top: 5.5em;
+  }
+
+  .flex-row {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+    margin-bottom: 4em;
+  }
+
+  .flex-column {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about-img {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
   header {
     padding: 1.5em 0;
+  }
+
+  .indent {
+    margin: 0 68px;
+  }
+
+  .indent-right {
+    margin-right: 68px;
   }
 
   header p {
@@ -283,8 +327,17 @@ footer {
   .hero-date {
     font-size: 1rem;
   }
+  .hero-date-click {
+    /* font-size: 1rem; */
+    margin-top: 4.4em;
+  }
   .hero-title {
     font-size: 2.5rem;
+  }
+
+  .hero-title-click {
+    font-size: 2.25rem;
+    margin-bottom: 0.25em;
   }
   .hero-description {
     max-width: 615px;
